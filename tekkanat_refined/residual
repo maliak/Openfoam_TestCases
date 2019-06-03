@@ -1,0 +1,7 @@
+set logscale y
+set title "Residuals"
+set ylabel 'Residual'
+set xlabel 'Iteration'
+plot "< cat log.hisa | grep 'GMRES iteration: 0   Residual:'|tr -s '(' '\t' |tr -s  ')' '\t' |cut -d ' ' -f9"  title "rhoR" with lines,"< cat log.hisa | grep 'GMRES iteration: 0   Residual:'|tr -s '(' '\t' |tr -s  ')' '\t' |cut -d ' ' -f10" title "RhoUxR" with lines,"< cat log.hisa | grep 'GMRES iteration: 0   Residual:'|tr -s '(' '\t' |tr -s  ')' '\t' |cut -d ' ' -f11" title "RhoUyR" with lines,"< cat log.hisa | grep 'GMRES iteration: 0   Residual:'|tr -s '(' '\t' |tr -s  ')' '\t' |cut -d ' ' -f13" title "RhoER" with lines
+pause 1
+reread

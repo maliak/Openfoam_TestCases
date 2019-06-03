@@ -1,0 +1,117 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  6
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 6-76a8284120c3
+Exec   : hisa -parallel
+Date   : May 31 2019
+Time   : 18:35:48
+Host   : "linux-779x.site"
+PID    : 2533
+I/O    : uncollated
+Case   : /home/mehmetali/OpenFOAM/hisa-master/tutorials/gridfin/tekkanat_refined
+nProcs : 8
+Slaves : 
+7
+(
+"linux-779x.site.2534"
+"linux-779x.site.2535"
+"linux-779x.site.2536"
+"linux-779x.site.2537"
+"linux-779x.site.2538"
+"linux-779x.site.2539"
+"linux-779x.site.2540"
+)
+
+Pstream initialized with:
+    floatTransfer      : 0
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0, region region0
+Creating static mesh
+
+Steady-state analysis detected
+
+pseudoTime: tolerance = 1e-06 (1e-06 1e-06 1e-06) 1e-06 , relTol = 0 (0 0 0) 0 
+
+Local timestepping selected
+
+Reading thermophysical properties
+
+Selecting thermodynamics package 
+{
+    type            hePsiThermo;
+    mixture         pureMixture;
+    transport       sutherland;
+    thermo          hConst;
+    equationOfState perfectGas;
+    specie          specie;
+    energy          sensibleInternalEnergy;
+}
+
+
+Viscous analysis detected
+
+Reading field U
+
+Creating turbulence model
+
+Selecting turbulence model type laminar
+Selecting laminar stress model Stokes
+
+Creating flux scheme
+
+Selecting flux scheme AUSMPlusUp
+
+Initial pseudo Courant No: Min: 1 Mean: 1 Max: 1
+
+
+Starting pseudotime iteration loop
+
+Time = 1
+
+pseudoTime: iteration 1
+Maximum Graident Valuemax(mag(grad(p))) [1 -2 -2 0 0 0 0] 0
+ mesh updated and variables interpolated
+Pseudo Courant No: Min: 1 Mean: 1 Max: 1
+Pseudo deltaT: Min: 2.421417e-07 Mean: 1.2148392e-06 Max: 0.00018613813
+Solving for (rho rhoU rhoE)
+  GMRES iteration: 0   Residual: 1 (0.99999713 8.3437202e-06 8.458739e-06) 1 
+  GMRES iteration: 1   Residual: 6.3948384e-07 (6.7420733e-07 9.1142652e-08 9.3910882e-08) 4.9336667e-07 
+ExecutionTime = 56.75 s  ExecutionStepTime = 48.44 s  ClockTime = 125 s
+
+Time = 2
+
+pseudoTime: iteration 2
+Maximum Graident Valuemax(mag(grad(p))) [1 -2 -2 0 0 0 0] 3.2176109e+09
+ mesh updated and variables interpolated
+Pseudo Courant No: Min: 0.5 Mean: 0.97002038 Max: 1
+Pseudo deltaT: Min: 1.2498714e-07 Mean: 1.1981473e-06 Max: 0.00018613813
+Solving for (rho rhoU rhoE)
+  GMRES iteration: 0   Residual: 0.39091327 (0.32860093 0.036448937 0.036562908) 0.38751074 
+  GMRES iteration: 1   Residual: 2.9236774e-07 (3.6159888e-07 3.5108663e-08 3.6295137e-08) 2.3811957e-07 
+ExecutionTime = 95.91 s  ExecutionStepTime = 39.16 s  ClockTime = 217 s
+
+Time = 3
+
+pseudoTime: iteration 3
+Maximum Graident Valuemax(mag(grad(p))) [1 -2 -2 0 0 0 0] 4.2479279e+09
+ mesh updated and variables interpolated
+Pseudo Courant No: Min: 0.3125 Mean: 1.1961422 Max: 1.25
+Pseudo deltaT: Min: 7.9265302e-08 Mean: 1.4902918e-06 Max: 0.00023267267
+Solving for (rho rhoU rhoE)
+  GMRES iteration: 0   Residual: 0.24578936 (0.18289422 0.034819589 0.034821794) 0.234687 
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 2533 on node linux-779x exited on signal 15 (Terminated).
+--------------------------------------------------------------------------
